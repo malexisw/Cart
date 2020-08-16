@@ -1,0 +1,92 @@
+.item-list{
+    width: 100%;
+}
+
+.title{
+    padding-top: 50px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.grid-item{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 400px);
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.title-item, .price-item{
+    font-weight: 700;
+}
+
+.title-item{
+    color: var(--text-secondary);
+}
+
+.add-cart{
+    cursor: pointer;
+    width: max-content;
+    padding: 0 5px 0 5px;
+    background: var(--bg-primary);
+    position: relative;
+    top: 10%;
+    left: 200px;
+    visibility: hidden;
+}
+
+.add-cart:hover{
+    opacity: 0.8;
+}
+
+.add-cart:active{
+    opacity: 0.6;
+}
+
+.item:hover .add-cart{
+    visibility: visible;
+}
+
+.slideCart{
+    position: absolute;
+    right: 0;
+    top: 80px;
+    border-left: solid 2px var(--text-primary);
+    border-bottom: solid 2px var(--text-primary);
+    background: var(--bg-third);
+    width: 23%;
+    height: auto;
+}
+
+.delete{
+    cursor: pointer;
+    position: relative;
+    left: 5px;
+    width: fit-content;
+}
+
+.appear{
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    border: solid 2px var(--text-primary);
+    border-right: none;
+    background: var(--bg-third);
+    width: 50px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

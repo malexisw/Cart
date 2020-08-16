@@ -1,0 +1,29 @@
+<div class="item-list">
+    <div class="appear" (click)="visibleCart = true" *ngIf="!visibleCart">
+        <fa-icon class="doubleArrow" icon="angle-double-left" size="2x"></fa-icon>
+    </div>
+    <div class="title">
+        Les produits
+    </div>
+    <div class="grid-item">
+        <div class="item" *ngFor="let item of items; index as i">
+            <div class="add-cart" (click)="addStorage(i)">
+                <fa-icon icon="plus"></fa-icon> Ajouter au panier
+            </div>
+            <img [src]="item.image" alt="Item" width="350" />
+            <div class="title-item">
+                {{ item.title }}
+            </div>
+            <div class="price-item">
+                {{ item.price }} €
+            </div>
+        </div>
+    </div>
+
+    <div class="slideCart" *ngIf="visibleCart">
+        <div class="delete" (click)="visibleCart = false">
+            <fa-icon icon="angle-double-right" size="2x"></fa-icon>
+        </div>
+        <app-side-cart ></app-side-cart>
+    </div>
+</div>

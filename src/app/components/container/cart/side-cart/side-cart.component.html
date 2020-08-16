@@ -1,0 +1,35 @@
+<div class="page-cart">
+    <div class="title">Votre panier</div>
+    <div class="clear" (click)="clearCart()">
+        Tout supprimer
+    </div>
+    <div class="grid-card">
+        <div class="item" *ngFor="let item of items; index as i">
+            <div class="delete" (click)="deleteItem(item.id)">
+                <fa-icon icon="times"></fa-icon>
+            </div>
+            <img [src]="item.image" width="350" />
+            <div class="title-item">
+                {{ item.title }}
+            </div>
+            <div class="price-item">
+                {{ item.price }} €
+            </div>
+            <div class="number">
+                <div class="add-count" (click)="addCount(i)">
+                    <fa-icon icon="chevron-up"></fa-icon>
+                </div>
+                <div class="text-number">
+                    {{ item.count }}
+                </div>
+                <div class="drop-count" (click)="dropCount(i)">
+                    <fa-icon icon="chevron-down"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="total-price">
+        Total: <span class="ttPrice"> {{ ttPrice }} €</span>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+.header{
+    background: var(--bg-primary);
+    height: 80px;
+    width: 100%;
+}
+
+.cart, .shop, .home{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+}
+
+.home{
+    left: 50%;
+    text-transform: uppercase;
+    transform: translateX(-60%);
+}
+
+.home-text, .shop-text, .cart-text{
+    color: var(--text-primary);
+}
+
+.home-text{
+    font-weight: 700;
+    font-size: 3em;
+    vertical-align: middle;
+}
+
+.shop{
+    left: 15%;
+}
+
+.cart{
+    left: 65%;
+}
+

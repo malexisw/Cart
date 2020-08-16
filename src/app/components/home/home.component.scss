@@ -1,0 +1,47 @@
+.home{
+    height: 100vh;
+    width: 100%;
+    background: center / contain no-repeat url("../../../assets/Home.jpg");
+    background-size: 100% 100%;
+}
+
+.home-text{
+    width: 400px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 42px;
+    color: var(--text-primary);
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+    top: 25%;
+    text-align: left;
+}
+
+.btn-link{
+    display: flex;
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+    top: 50%;
+    width: 200px;
+    height: 50px;
+    border: solid 2px var(--text-primary);
+    border-radius: 20px;
+    align-items: center;
+    background-color: var(--bg-primary);
+    transition: ease-in var(--transition-speed);
+}
+
+.text-link{
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-link:hover{
+    opacity: 0.8;
+}

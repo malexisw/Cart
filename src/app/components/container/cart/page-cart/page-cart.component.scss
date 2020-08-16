@@ -1,0 +1,137 @@
+.page-cart{
+    width: 100%;
+    height: auto;
+}
+
+.title{
+    margin: auto;
+    text-align: center;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.grid-card{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-item, .price-item, .total-price{
+    font-weight: 700;
+}
+
+.title-item, .total-price{
+    color: var(--text-secondary);
+}
+
+.total-price{
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.msg-error{
+    color: red;
+    font-size: 24px;
+    text-align: center;
+}
+
+.delete{
+    cursor: pointer;
+    position: relative;
+    left: 95%;
+    top: 7%;
+    width: max-content;
+}
+
+.clear{
+    width: max-content;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 70%;
+    border: solid 1px var(--text-primary);
+    transition-duration: var(--transition-speed);
+}
+
+.clear:hover{
+    background-color: var(--bg-primary);
+    opacity: 0.8;
+}
+
+.clear:active{
+    opacity: 0.5;
+}
+
+.number{
+    position: relative;
+    width: fit-content;
+}
+
+.text-number{
+    font-size: 24;
+    color: var(--text-secondary);
+    text-align: center;
+    font-weight: 700;
+}
+
+.add-count, .drop-count{
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 400px){
+    
+    .grid-card{
+        grid-template-columns: repeat(2, 400px);
+        grid-template-rows: auto;
+        gap: 50px;
+    }
+
+    .title{
+        width: 50%;
+        padding-top: 50px;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .number{
+        left: 320px;
+        bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .grid-card{
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .title{
+        margin-bottom: 10px;
+        width: 100%;
+        padding-top: 10px;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .item{
+        width: 70%;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .clear{
+        margin-top: 10px;
+    }
+
+    .number{
+        left: 90%;
+        bottom: 50px;
+    }
+}
+
