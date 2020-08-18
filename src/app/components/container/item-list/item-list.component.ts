@@ -2,11 +2,22 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ItemService } from '../../../services/item.service'
 import { Item } from '../../../models/Item.model'
 import { SideCartComponent } from '../cart/side-cart/side-cart.component';
+import { trigger, transition, state, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-item-list',
   templateUrl: './item-list.component.html',
   styleUrls: ['./item-list.component.scss'],
+  animations: [
+    trigger('open', [
+
+      state('void', style({ position: 'absolute', left: '100%'})),
+
+      transition(':enter, :leave', [
+        animate(250)
+      ]),
+    ])
+  ]
 })
 export class ItemListComponent implements OnInit {
   @ViewChild(SideCartComponent) child: SideCartComponent

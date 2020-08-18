@@ -20,10 +20,10 @@
         </div>
     </div>
 
-    <div class="slideCart" *ngIf="visibleCart">
+    <div class="slideCart" *ngIf="visibleCart" @open>
         <div class="delete" (click)="visibleCart = false">
             <fa-icon icon="angle-double-right" size="2x"></fa-icon>
         </div>
-        <app-side-cart ></app-side-cart>
+        <app-side-cart></app-side-cart>
     </div>
 </div>
