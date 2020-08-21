@@ -59,7 +59,7 @@ export class PageCartComponent implements OnInit {
   }
 
   dropCount(id: number){
-    if(this.items[id].count >= 1){
+    if(this.items[id].count <= 1){
       this.items[id].count -= 1
       this.deleteItem(id)
     } else {
