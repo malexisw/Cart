@@ -54,12 +54,13 @@ export class SideCartComponent implements OnInit {
     this.getTotalPrice()
   }
 
-  dropCount(id: number){
-    if(this.items[id].count >= 1){
-      this.items[id].count -= 1
+  dropCount(id: number, i: number){
+    console.log(id)
+    if(this.items[i].count <= 1){
+      this.items[i].count -= 1
       this.deleteItem(id)
     } else {
-      this.items[id].count -= 1
+      this.items[i].count -= 1
     }
     this.getTotalPrice()
   }
