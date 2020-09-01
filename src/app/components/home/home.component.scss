@@ -6,25 +6,15 @@
 }
 
 .home-text{
-    width: 400px;
-    font-size: 32px;
     font-weight: bold;
-    line-height: 42px;
     color: var(--text-primary);
     position: absolute;
-    left: 70%;
-    transform: translateX(-50%);
-    top: 25%;
     text-align: left;
 }
 
 .btn-link{
     display: flex;
     position: absolute;
-    left: 70%;
-    transform: translateX(-50%);
-    top: 50%;
-    width: 200px;
     height: 50px;
     border: solid 2px var(--text-primary);
     border-radius: 20px;
@@ -44,4 +34,37 @@
 
 .btn-link:hover{
     opacity: 0.8;
+}
+
+@media only screen and (max-width: 800px){
+    .home-text{
+        width: 80%;
+        font-size: 32px;
+        line-height: 42px;
+        left: 5%;
+        top: 25%;
+    }
+    .btn-link{
+        left: 70%;
+        transform: translateX(-50%);
+        top: 60%;
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .home-text{
+        width: 400px;
+        font-size: 32px;
+        line-height: 42px;
+        left: 70%;
+        transform: translateX(-50%);
+        top: 25%;
+    }
+    .btn-link{
+        left: 70%;
+        transform: translateX(-50%);
+        top: 50%;
+        width: 200px;
+    }
 }

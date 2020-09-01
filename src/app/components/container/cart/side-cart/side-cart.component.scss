@@ -59,7 +59,8 @@
     padding: 5px;
     cursor: pointer;
     position: relative;
-    left: 70%;
+    left: 50%;
+    transform: translateX(-50%);
     border: solid 1px var(--text-primary);
     transition-duration: var(--transition-speed);
     margin-top: 10px;

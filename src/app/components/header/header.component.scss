@@ -13,9 +13,7 @@
 }
 
 .home{
-    left: 50%;
     text-transform: uppercase;
-    transform: translateX(-60%);
 }
 
 .home-text, .shop-text, .cart-text{
@@ -28,11 +26,32 @@
     vertical-align: middle;
 }
 
-.shop{
-    left: 15%;
+
+
+@media only screen and (max-width: 800px){
+    .cart{
+        right: 230px;
+    }
+
+    .shop{
+        left: 5%;
+    }
+    .home{
+        right: 10%;
+        text-transform: uppercase;
+        transform: translateX(60%);
+    }
 }
 
-.cart{
-    left: 65%;
+@media only screen and (min-width: 800px){
+    .cart{
+        left: 65%;
+    }
+    .shop{
+        left: 15%;
+    }
+    .home{
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
-

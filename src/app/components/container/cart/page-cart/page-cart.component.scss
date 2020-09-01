@@ -81,7 +81,7 @@
     cursor: pointer;
 }
 
-@media only screen and (min-width: 400px){
+@media only screen and (min-width: 800px){
     
     .grid-card{
         grid-template-columns: repeat(2, 400px);
@@ -102,7 +102,7 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px){
     .grid-card{
         grid-template-columns: repeat(1, 300px);
         grid-template-rows: auto;
@@ -127,6 +127,8 @@
 
     .clear{
         margin-top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .number{
