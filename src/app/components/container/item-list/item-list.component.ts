@@ -36,10 +36,13 @@ export class ItemListComponent implements OnInit {
   constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
+    //create the items
     this.createItems()
+    //get the items created
     this.items = this.itemService.getItems()
   }
 
+  //initialise the date of the items
   initData(){
     this.title[0] = "Canapé pour intérieur foncé"
     this.title[1] = "Canapé en velour"
@@ -72,6 +75,7 @@ export class ItemListComponent implements OnInit {
     this.price[8] = 459
   }
 
+  //create the items
   createItems(){
     this.initData()
     for(let i = 0; i <this.title.length; i++) {
@@ -85,6 +89,7 @@ export class ItemListComponent implements OnInit {
     }
   }
 
+  //add the item selected to the localstorage
   addStorage(id: number){
     this.itemService.saveItems(id)
     this.visibleCart = true
